@@ -7,8 +7,7 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-BeautifulSoup4 = "^4.8.2"
-lxml = "^4.5.0"
+beautifulsoup4 = {extras = ["lxml"], version = "^4.8.2"}
 
 [tool.poetry.dev-dependencies]
 
