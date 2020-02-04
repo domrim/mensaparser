@@ -8,7 +8,9 @@ def get_food_plan(**kwargs):
     """
     Gets food plan for mensa / date from sw-ka.de
 
-    :param kwargs:
+    Valid mensa names: adenauerring, moltke, erzenberger, gottesaue, tiefenbronner, holzgarten, cafeteria_moltkestraße
+
+    :param kwargs: "mensa" key with valid mensa name and "date" key with date in isoformat (YYYY-MM-DD)
     :return: dict of canteen-lines with food and prices (in €)
     """
     canteens = {
