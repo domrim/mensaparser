@@ -24,14 +24,14 @@ def get_food_plan(**kwargs):
     }
 
     if kwargs.get("mensa") is None:
-        mensa = "Am Adenauerring"
+        mensa = "adenauerring"
     else:
         if kwargs.get("mensa") not in canteens.keys():
             raise KeyError("Given menas name not valid.")
         mensa = kwargs.get("mensa")
 
     if kwargs.get("date") is None:
-        date = datetime.date.today()
+        date = datetime.datetime.today()
     else:
         date = datetime.datetime.fromisoformat(kwargs.get("date"))
     weekday = date.isoweekday()
@@ -62,4 +62,5 @@ def get_food_plan(**kwargs):
 
 
 if __name__ == "__main__":
-    food = get_food_plan(mensa="Am Adenauerring", date="2020-02-05")
+    food = get_food_plan()
+    print(food)
