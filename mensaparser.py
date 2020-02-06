@@ -54,7 +54,7 @@ def get_food_plan(**kwargs):
             try:
                 gericht = essen.find("td", class_="first").span.text
                 preis = essen.find("span", class_="price_1").text.rstrip(" €")
-                linie_angebote.append({gericht: preis})
+                linie_angebote.append((gericht, preis))
             except AttributeError:
                 pass
         foodplan[linie] = linie_angebote
